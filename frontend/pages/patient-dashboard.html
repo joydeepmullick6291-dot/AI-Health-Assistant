@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patient Dashboard | Biocanvas</title>
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/patient.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container nav-shell">
+      <a href="index.html" class="brand brand-image" aria-label="Biocanvas home">
+            <img src="/frontend/assests/logos/TestLogo.svg" alt="Biocanvas logo" class="brand-logo">
+        </a>
+      <div class="nav-actions">
+        <button class="theme-toggle" data-theme-toggle aria-label="Switch theme">◐</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="page-shell">
+    <aside class="sidebar sidebar-patient">
+      <nav class="sidebar-nav">
+        <a href="patient-dashboard.html" class="nav-link active">Dashboard</a>
+        <a href="patient-appointments.html" class="nav-link">Appointments</a>
+        <a href="patient-vitals.html" class="nav-link">Vitals</a>
+        <a href="patient-reports.html" class="nav-link">Medical records</a>
+        <a href="patient-symptom.html" class="nav-link">Symptom predictor</a>
+      </nav>
+      <div class="sidebar-card card-surface">
+        <span class="eyebrow">Today</span>
+        <h3>Annual follow-up at 4:00 PM</h3>
+        <p>Dr. Meera Sen, Internal Medicine · Room 302</p>
+      </div>
+    </aside>
+
+    <main id="main-content" class="content-shell">
+      <section class="patient-shell" id="dashboard">
+        <section class="top-summary card-surface">
+          <div class="search-row">
+            <input type="search" placeholder="Search appointments, reports, prescriptions" aria-label="Search">
+            <div class="top-icons">
+              <button class="icon-btn" type="button" aria-label="Toggle theme">◐</button>
+              <button class="icon-btn" type="button" aria-label="Notifications">◌</button>
+            </div>
+            <div class="user-pill">
+              <div class="avatar">JK</div>
+              <div>
+                <strong>Joydeep Kumar</strong>
+                <span>PATIENT ID · 00128</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="hero-grid">
+          <article class="hero-card card-surface">
+            <span class="eyebrow">Care summary</span>
+            <h1>Your care, records, and follow-ups in one calm workspace.</h1>
+            <p>Built for a healthcare portal flow with quick access to appointments, prescriptions, lab reports, and profile settings. The layout stays card-based and mobile-friendly.</p>
+            <div class="button-row">
+              <a class="btn btn-primary" href="patient-appointments.html">Book appointment</a>
+              <a class="btn btn-secondary" href="patient-reports.html#labreports">View lab reports</a>
+            </div>
+          </article>
+
+          <article class="health-score card-surface">
+            <span class="eyebrow">Health score</span>
+            <div class="score-ring"><span>78%</span></div>
+            <p>All recent screenings are complete. One follow-up is pending review.</p>
+          </article>
+
+          <article class="mini-card card-surface">
+            <span class="eyebrow">Next refill</span>
+            <h2>3 days</h2>
+            <p>Paracetamol ends on Friday.</p>
+          </article>
+
+          <article class="mini-card card-surface">
+            <span class="eyebrow">Unread updates</span>
+            <h2>2 items</h2>
+            <p>Lab review and billing note.</p>
+          </article>
+        </section>
+
+        <section class="quick-actions-section">
+          <div class="section-head">
+            <h2>Quick actions</h2>
+            <span>Designed for patient self-service</span>
+          </div>
+          <div class="action-grid">
+            <button class="action-card card-surface" type="button" data-go-appointments>
+              <div class="action-icon">✦</div><h3>Book visit</h3><p>Schedule a new consultation or reschedule an existing slot.</p>
+            </button>
+            <button class="action-card card-surface" type="button" data-go-reports>
+              <div class="action-icon">✚</div><h3>View records</h3><p>Open diagnoses, visit notes, and previous treatment history.</p>
+            </button>
+            <button class="action-card card-surface" type="button" data-go-reports>
+              <div class="action-icon">◔</div><h3>Download reports</h3><p>Access CBC, scan summaries, and future lab result files.</p>
+            </button>
+            <button class="action-card card-surface" type="button" data-go-profile>
+              <div class="action-icon">◎</div><h3>Update profile</h3><p>Edit emergency contact, allergies, blood group, and address.</p>
+            </button>
+          </div>
+        </section>
+
+        <section class="stats-grid">
+          <article class="stat-card card-surface"><span class="eyebrow">Upcoming appointments</span><strong>02</strong><p>One in-person visit and one lab follow-up already scheduled.</p></article>
+          <article class="stat-card card-surface"><span class="eyebrow">Active prescriptions</span><strong>03</strong><p>All medications are synced with the doctor visit summary.</p></article>
+          <article class="stat-card card-surface"><span class="eyebrow">Pending lab reviews</span><strong>01</strong><p>One report is visible in the portal before doctor review.</p></article>
+          <article class="stat-card card-surface"><span class="eyebrow">Profile completion</span><strong>88%</strong><p>Add insurance and preferred pharmacy to complete onboarding.</p></article>
+        </section>
+
+        <section class="content-sections">
+          <article class="section-card card-surface" id="appointments">
+            <div class="section-head"><h2>Appointments</h2><a href="patient-appointments.html">See all</a></div>
+            <div class="list-grid">
+              <div class="list-item"><strong>Annual follow-up</strong><span>4:00 PM · Dr. Meera Sen</span></div>
+              <div class="list-item"><strong>Lab review</strong><span>Tomorrow · 11:30 AM</span></div>
+            </div>
+          </article>
+
+          <article class="section-card card-surface" id="records">
+            <div class="section-head"><h2>Medical records</h2><a href="patient-reports.html">Open</a></div>
+            <div class="list-grid">
+              <div class="list-item"><strong>Diagnosis history</strong><span>3 entries available</span></div>
+              <div class="list-item"><strong>Visit notes</strong><span>Latest consultation synced</span></div>
+            </div>
+          </article>
+
+          <article class="section-card card-surface" id="prescriptions">
+            <div class="section-head"><h2>Prescriptions</h2><a href="patient-reports.html#prescriptions">Refill</a></div>
+            <div class="list-grid">
+              <div class="list-item"><strong>Paracetamol</strong><span>Ends in 3 days</span></div>
+              <div class="list-item"><strong>Vitamin D</strong><span>2 weeks remaining</span></div>
+            </div>
+          </article>
+
+          <article class="section-card card-surface" id="labreports">
+            <div class="section-head"><h2>Lab reports</h2><a href="patient-reports.html#labreports">View reports</a></div>
+            <div class="list-grid">
+              <div class="list-item"><strong>CBC report</strong><span>Ready to download</span></div>
+              <div class="list-item"><strong>Scan summary</strong><span>Awaiting doctor review</span></div>
+            </div>
+          </article>
+
+          <article class="section-card card-surface" id="profile">
+            <div class="section-head"><h2>Profile management</h2><button class="btn btn-primary" type="button" data-go-profile>Edit profile</button></div>
+            <div class="profile-grid">
+              <div class="profile-item"><span>Full name</span><strong>Joydeep Kumar</strong></div>
+              <div class="profile-item"><span>Blood group</span><strong>O+</strong></div>
+              <div class="profile-item"><span>Phone</span><strong>+91 98765 43210</strong></div>
+              <div class="profile-item"><span>Address</span><strong>123 Main Street, Chennai</strong></div>
+              <div class="profile-item"><span>Emergency contact</span><strong>Ravi Kumar · Father</strong></div>
+              <div class="profile-item"><span>Allergies</span><strong>Dust allergy</strong></div>
+            </div>
+          </article>
+        </section>
+      </section>
+    </main>
+  </div>
+
+  <script src="../js/config.js" defer></script>
+  <script src="../js/api.js" defer></script>
+  <script src="../js/utils.js" defer></script>
+  <script src="../js/auth.js" defer></script>
+  <script src="../js/patient/dashboard.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medical records | Tech.Care</title>
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/patient.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container nav-shell">
+      <a href="index.html" class="brand brand-image" aria-label="Biocanvas home">
+        <img src="/frontend/assests/logos/TestLogo.svg" alt="Biocanvas logo" class="brand-logo">
+      </a>
+      <div class="nav-actions">
+        <button class="theme-toggle" data-theme-toggle aria-label="Switch theme">◐</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="page-shell">
+    <aside class="sidebar sidebar-patient">
+      <nav class="sidebar-nav">
+        <a href="patient-dashboard.html" class="nav-link">Dashboard</a>
+        <a href="patient-appointments.html" class="nav-link">Appointments</a>
+        <a href="patient-vitals.html" class="nav-link">Vitals</a>
+        <a href="patient-reports.html" class="nav-link active">Medical records</a>
+        <a href="patient-symptom.html" class="nav-link">Symptom predictor</a>
+      </nav>
+      <div class="sidebar-card card-surface">
+        <span class="eyebrow">Today</span>
+        <h3>Annual follow-up at 4:00 PM</h3>
+        <p>Dr. Meera Sen, Internal Medicine · Room 302</p>
+      </div>
+    </aside>
+
+    <main id="main-content" class="content-shell">
+      <section class="patient-shell">
+        <section class="top-summary card-surface">
+          <div class="search-row">
+            <input type="search" placeholder="Search doctors, departments, slots" aria-label="Search">
+            <div class="top-icons">
+              <button class="icon-btn" type="button" aria-label="Toggle theme">◐</button>
+              <button class="icon-btn" type="button" aria-label="Notifications">◌</button>
+            </div>
+            <div class="user-pill">
+              <div class="avatar" data-user-avatar>JK</div>
+              <div>
+                <strong data-user-name>Joydeep Kumar</strong>
+                <span data-user-id>PATIENT ID · 00128</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="appointments-layout">
+          <article class="section-card card-surface appointments-hero">
+            <span class="eyebrow">Medical records</span>
+            <h1>View your records</h1>
+            <p>Access prescriptions, lab reports, and visit summaries in one place.</p>
+          </article>
+
+          <article class="section-card card-surface">
+            <div class="section-head"><h2>Records</h2></div>
+            <div class="record-grid">
+              <div class="record-card">
+                <span class="badge blue">Lab report</span>
+                <h3>Blood test summary</h3>
+                <p>Uploaded 2 days ago</p>
+                <button type="button" class="btn btn-secondary">View report</button>
+              </div>
+              <div class="record-card">
+                <span class="badge blue">Prescription</span>
+                <h3>Medication list</h3>
+                <p>Updated after latest visit</p>
+                <button type="button" class="btn btn-secondary">Open prescription</button>
+              </div>
+              <div class="record-card">
+                <span class="badge blue">Visit summary</span>
+                <h3>Doctor notes</h3>
+                <p>Last consultation summary</p>
+                <button type="button" class="btn btn-secondary">Read notes</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="section-card card-surface">
+            <div class="section-head">
+              <h2>Recent records</h2>
+            </div>
+            <div class="note-list">
+              <div class="note">Lab report added · CBC, glucose, lipid profile</div>
+              <div class="note">Prescription updated · 3 medicines prescribed</div>
+              <div class="note">Visit summary saved · Follow-up in 2 weeks</div>
+            </div>
+          </article>
+        </section>
+      </section>
+    </main>
+  </div>
+
+  <script src="../js/config.js" defer></script>
+  <script src="../js/api.js" defer></script>
+  <script src="../js/utils.js" defer></script>
+  <script src="../js/auth.js" defer></script>
+  <script src="../js/patient/reports.js" defer></script>
+</body>
+</html>

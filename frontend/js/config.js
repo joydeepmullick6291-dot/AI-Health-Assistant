@@ -1,0 +1,1 @@
+window.BIOCANVAS_CONFIG={apiBase:window.BIOCANVAS_CONFIG?.apiBase||'/api'};

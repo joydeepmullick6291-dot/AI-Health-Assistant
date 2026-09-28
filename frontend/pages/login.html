@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | Biocanvas</title>
+  <link rel="preconnect" href="https://api.fontshare.com">
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/auth.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
+  <header class="site-header auth-header">
+    <div class="container nav-shell">
+      <a href="index.html" class="brand brand-image" aria-label="Biocanvas home">
+        <img src="/frontend/assests/logos/TestLogo.svg" alt="Biocanvas logo" class="brand-logo">
+      </a>
+      <div class="nav-actions">
+        <button class="theme-toggle" data-theme-toggle aria-label="Switch theme">◐</button>
+        <a href="register.html" class="btn btn-primary">Create account</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" class="auth-page">
+    <div class="container auth-grid">
+      <section class="auth-intro">
+        <span class="eyebrow">Secure access</span>
+        <h1>Log in to continue your care workflow.</h1>
+        <p>
+          Patients can manage appointments, vitals, symptom workflows, and reports, while doctors can access appointments, booked patients, and patient report review.
+        </p>
+
+        <div class="auth-info-cards">
+          <article class="auth-info-card">
+            <span class="badge primary">Patient</span>
+            <h3>Self-service dashboard</h3>
+            <p>Profile, appointments, vitals, lab reports, and symptom workflow access.</p>
+          </article>
+          <article class="auth-info-card">
+            <span class="badge blue">Doctor</span>
+            <h3>Clinical dashboard</h3>
+            <p>Upcoming appointments, patient list, report access, and vitals review.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="auth-card-shell">
+        <div class="auth-card">
+          <div class="auth-head">
+            <span class="eyebrow">Welcome back</span>
+            <h2>Login</h2>
+            <p>Enter your account details and choose your portal role.</p>
+          </div>
+
+          <form class="auth-form" id="loginForm">
+            <div class="field-group role-group">
+              <span class="field-label">Login as</span>
+              <div class="role-toggle" role="group" aria-label="Select role">
+                <button type="button" class="role-btn active" data-role="patient">Patient</button>
+                <button type="button" class="role-btn" data-role="doctor">Doctor</button>
+              </div>
+              <input type="hidden" name="role" id="loginRole" value="patient">
+            </div>
+
+            <div class="field-group">
+              <label for="loginEmail">Email</label>
+              <input type="email" id="loginEmail" name="email" placeholder="Enter your email" required>
+            </div>
+
+            <div class="field-group">
+              <label for="loginPassword">Password</label>
+              <input type="password" id="loginPassword" name="password" placeholder="Enter your password" required>
+            </div>
+
+            <div class="form-row split-row">
+              <label class="checkbox-row">
+                <input type="checkbox" name="remember">
+                <span>Remember me</span>
+              </label>
+              <a href="#" class="text-link">Forgot password?</a>
+            </div>
+
+            <button type="submit" class="btn btn-primary auth-submit">Login</button>
+
+            <p class="form-switch">Don’t have an account? <a href="register.html">Create one</a></p>
+          </form>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="../js/config.js" defer></script>
+<script src="../js/api.js" defer></script>
+<script src="../js/utils.js" defer></script>
+<script src="../js/auth.js" defer></script>
+</body>
+</html>

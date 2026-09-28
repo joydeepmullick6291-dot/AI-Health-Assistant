@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register | Biocanvas</title>
+  <link rel="preconnect" href="https://api.fontshare.com">
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/auth.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
+  <header class="site-header auth-header">
+    <div class="container nav-shell">
+      <a href="index.html" class="brand brand-image" aria-label="Biocanvas home">
+        <img src="/frontend/assests/logos/TestLogo.svg" alt="Biocanvas logo" class="brand-logo">
+      </a>
+      <div class="nav-actions">
+        <button class="theme-toggle" data-theme-toggle aria-label="Switch theme">◐</button>
+        <a href="login.html" class="btn btn-secondary">Back to login</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" class="auth-page">
+    <div class="container auth-grid register-grid">
+      <section class="auth-intro compact-intro">
+        <span class="eyebrow">Create account</span>
+        <h1>Start with the right role and continue into your dashboard.</h1>
+        <p>
+          This register screen is designed to map directly into patient and doctor onboarding before we connect forms to the backend endpoints.
+        </p>
+      </section>
+
+      <section class="auth-card-shell wide-shell">
+        <div class="auth-card register-card">
+          <div class="auth-head">
+            <span class="eyebrow">New account</span>
+            <h2>Register</h2>
+            <p>Create a patient or doctor account using the same design system as login.</p>
+          </div>
+
+          <form class="auth-form register-form" id="registerForm">
+            <div class="field-group role-group">
+              <span class="field-label">Register as</span>
+              <div class="role-toggle" role="group" aria-label="Select role">
+                <button type="button" class="role-btn active" data-role="patient">Patient</button>
+                <button type="button" class="role-btn" data-role="doctor">Doctor</button>
+              </div>
+              <input type="hidden" name="role" id="registerRole" value="patient">
+            </div>
+
+            <div class="form-row two-col">
+              <div class="field-group">
+                <label for="fullName">Full name</label>
+                <input type="text" id="fullName" name="full_name" placeholder="Enter full name" required>
+              </div>
+              <div class="field-group">
+                <label for="phone">Phone number</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter phone number" required>
+              </div>
+            </div>
+
+            <div class="form-row two-col">
+              <div class="field-group">
+                <label for="registerEmail">Email</label>
+                <input type="email" id="registerEmail" name="email" placeholder="Enter your email" required>
+              </div>
+              <div class="field-group">
+                <label for="registerPassword">Password</label>
+                <input type="password" id="registerPassword" name="password" placeholder="Create password" required>
+              </div>
+            </div>
+
+            <div class="form-row two-col">
+              <div class="field-group">
+                <label for="confirmPassword">Confirm password</label>
+                <input type="password" id="confirmPassword" name="confirm_password" placeholder="Confirm password" required>
+              </div>
+              <div class="field-group doctor-only hidden" data-doctor-field>
+                <label for="specialization">Specialization</label>
+                <input type="text" id="specialization" name="specialization" placeholder="e.g. Gynecology">
+              </div>
+            </div>
+
+            <div class="form-row two-col">
+              <div class="field-group patient-only">
+                <label for="age">Age</label>
+                <input type="number" id="age" name="age" placeholder="Enter age">
+              </div>
+              <div class="field-group patient-only">
+                <label for="bloodGroup">Blood group</label>
+                <input type="text" id="bloodGroup" name="blood_group" placeholder="e.g. O+">
+              </div>
+            </div>
+
+            <label class="checkbox-row terms-row">
+              <input type="checkbox" required>
+              <span>I agree to the portal terms and consent policy.</span>
+            </label>
+
+            <button type="submit" class="btn btn-primary auth-submit">Create account</button>
+
+            <p class="form-switch">Already have an account? <a href="login.html">Login here</a></p>
+          </form>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="../js/auth.js" defer></script>
+</body>
+</html>

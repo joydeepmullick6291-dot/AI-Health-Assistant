@@ -1,0 +1,256 @@
+.auth-header {
+  background: color-mix(in srgb, var(--color-bg) 92%, transparent);
+}
+
+.auth-page {
+  min-height: calc(100dvh - 80px);
+  display: flex;
+  align-items: center;
+  padding: clamp(var(--space-8), 6vw, var(--space-16)) 0;
+}
+
+.auth-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: var(--space-8);
+  align-items: center;
+}
+
+.register-grid {
+  grid-template-columns: 0.75fr 1.25fr;
+}
+
+.auth-intro {
+  display: grid;
+  gap: var(--space-5);
+}
+
+.auth-intro h1 {
+  font-size: var(--text-hero);
+  line-height: 0.98;
+  max-width: 10ch;
+}
+
+.auth-intro p {
+  max-width: 52ch;
+  color: var(--color-text-muted);
+}
+
+.auth-info-cards {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.auth-info-card,
+.auth-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: calc(var(--radius-xl) + 0.5rem);
+  box-shadow: var(--shadow-sm);
+}
+
+.auth-info-card {
+  padding: var(--space-5);
+}
+
+.auth-info-card h3 {
+  font-size: var(--text-lg);
+  margin: var(--space-3) 0 var(--space-2);
+}
+
+.auth-info-card p,
+.auth-head p,
+.form-switch,
+.field-label,
+.checkbox-row,
+.text-link {
+  color: var(--color-text-muted);
+}
+
+.auth-card-shell {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.wide-shell {
+  justify-content: stretch;
+}
+
+.auth-card {
+  width: min(100%, 640px);
+  padding: clamp(var(--space-5), 3vw, var(--space-8));
+}
+
+.register-card {
+  width: 100%;
+}
+
+.auth-head {
+  display: grid;
+  gap: var(--space-3);
+  margin-bottom: var(--space-6);
+}
+
+.auth-head h2 {
+  font-size: var(--text-xl);
+  line-height: 1.1;
+}
+
+.auth-form {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.form-row {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.two-col {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.split-row {
+  grid-template-columns: 1fr auto;
+  align-items: center;
+}
+
+.field-group {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.field-group label,
+.field-label {
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.field-group input {
+  min-height: 52px;
+  border-radius: 16px;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface-2);
+  padding: 0 var(--space-4);
+  outline: none;
+}
+
+.field-group input:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--color-primary-soft) 75%, transparent);
+}
+
+.role-toggle {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-2);
+  padding: var(--space-2);
+  border-radius: 18px;
+  background: var(--color-surface-offset);
+  border: 1px solid var(--color-border);
+}
+
+.role-btn {
+  min-height: 46px;
+  border: 0;
+  border-radius: 14px;
+  background: transparent;
+  color: var(--color-text-muted);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.role-btn.active {
+  background: var(--color-surface);
+  color: var(--color-text);
+  box-shadow: var(--shadow-sm);
+}
+
+.checkbox-row {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+}
+
+.checkbox-row input {
+  inline-size: 16px;
+  block-size: 16px;
+  accent-color: var(--color-primary);
+}
+
+.text-link,
+.form-switch a {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.auth-submit {
+  width: 100%;
+  margin-top: var(--space-2);
+}
+
+.form-switch {
+  text-align: center;
+  font-size: var(--text-sm);
+}
+
+.hidden {
+  display: none;
+}
+
+.compact-intro h1 {
+  max-width: 12ch;
+}
+
+.terms-row {
+  margin-top: var(--space-1);
+}
+
+@media (max-width: 980px) {
+  .auth-grid,
+  .register-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .auth-card-shell {
+    justify-content: stretch;
+  }
+
+  .auth-card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .two-col,
+  .split-row {
+    grid-template-columns: 1fr;
+  }
+
+  .auth-intro h1 {
+    max-width: 12ch;
+  }
+
+  .nav-actions .btn {
+    display: none;
+  }
+}
+
+.brand-image {
+  display: inline-flex;
+  align-items: center;
+}
+
+.brand-logo {
+  height: 48px;
+  width: auto;
+  display: block;
+}
+
+@media (max-width: 640px) {
+  .brand-logo {
+    height: 40px;
+  }
+}

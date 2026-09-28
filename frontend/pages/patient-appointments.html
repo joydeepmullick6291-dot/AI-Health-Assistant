@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Appointments | Tech.Care</title>
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/patient.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container nav-shell">
+      <a href="index.html" class="brand brand-image" aria-label="Biocanvas home">
+            <img src="/frontend/assests/logos/TestLogo.svg" alt="Biocanvas logo" class="brand-logo">
+        </a>
+      <div class="nav-actions">
+        <button class="theme-toggle" data-theme-toggle aria-label="Switch theme">◐</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="page-shell">
+    <aside class="sidebar sidebar-patient">
+      <nav class="sidebar-nav">
+        <a href="patient-dashboard.html" class="nav-link">Dashboard</a>
+        <a href="patient-appointments.html" class="nav-link active">Appointments</a>
+        <a href="patient-vitals.html" class="nav-link">Vitals</a>
+        <a href="patient-reports.html" class="nav-link">Medical records</a>
+        <a href="patient-symptom.html" class="nav-link">Symptom predictor</a>
+      </nav>
+      <div class="sidebar-card card-surface">
+        <span class="eyebrow">Today</span>
+        <h3>Annual follow-up at 4:00 PM</h3>
+        <p>Dr. Meera Sen, Internal Medicine · Room 302</p>
+      </div>
+    </aside>
+
+    <main id="main-content" class="content-shell">
+      <section class="patient-shell">
+        <section class="top-summary card-surface">
+          <div class="search-row">
+            <input type="search" placeholder="Search doctors, departments, slots" aria-label="Search">
+            <div class="top-icons">
+              <button class="icon-btn" type="button" aria-label="Toggle theme">◐</button>
+              <button class="icon-btn" type="button" aria-label="Notifications">◌</button>
+            </div>
+            <div class="user-pill">
+              <div class="avatar" data-user-avatar>JK</div>
+              <div>
+                <strong data-user-name>Joydeep Kumar</strong>
+                <span data-user-id>PATIENT ID · 00128</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="appointments-layout">
+          <article class="section-card card-surface appointments-hero">
+            <span class="eyebrow">Appointments</span>
+            <h1>Book a doctor visit</h1>
+            <p>Choose a doctor, pick a slot, and submit the booking request from one place.</p>
+            <div class="button-row">
+              <button class="btn btn-primary" type="button" data-refresh-doctors>Refresh doctors</button>
+              <button class="btn btn-secondary" type="button" data-view-schedule>View schedule</button>
+            </div>
+          </article>
+
+          <article class="section-card card-surface appointments-filter">
+            <div class="section-head"><h2>Filter by department</h2></div>
+            <div class="chips-row" data-department-chips></div>
+          </article>
+
+          <article class="section-card card-surface doctor-results">
+            <div class="section-head"><h2>Available doctors</h2><span data-doctor-count>0 doctors</span></div>
+            <div class="doctor-list" data-doctor-list></div>
+          </article>
+
+          <article class="section-card card-surface slots-panel">
+            <div class="section-head"><h2>Available times</h2><span data-slot-count>0 slots</span></div>
+            <div class="slot-list" data-slot-list>
+              <div class="note empty-state">Select a doctor to see slots.</div>
+            </div>
+          </article>
+
+          <article class="section-card card-surface confirmation-panel hidden" data-confirmation-panel>
+            <div class="section-head"><h2>Booking confirmed</h2></div>
+            <div class="confirmation-box">
+              <strong data-confirm-doctor>-</strong>
+              <span data-confirm-slot>-</span>
+              <p data-confirm-message>Your appointment request has been submitted.</p>
+            </div>
+          </article>
+          <article class="section-card card-surface my-bookings-panel">
+  <div class="section-head"><h2>My bookings</h2><span data-bookings-count>0 bookings</span></div>
+  <div class="bookings-list" data-bookings-list>
+    <div class="note empty-state">Booked appointments will appear here.</div>
+  </div>
+</article>
+        </section>
+      </section>
+    </main>
+  </div>
+
+  <script src="../js/config.js" defer></script>
+  <script src="../js/api.js" defer></script>
+  <script src="../js/utils.js" defer></script>
+  <script src="../js/auth.js" defer></script>
+  <script src="../js/patient/appointments.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Biocanvas Health Portal</title>
+  <link rel="preconnect" href="https://api.fontshare.com">
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/landing.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container nav-shell">
+        <a href="index.html" class="brand brand-image" aria-label="Biocanvas home">
+            <img src="/frontend/assests/logos/TestLogo.svg" alt="Biocanvas logo" class="brand-logo">
+        </a>
+
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="#features">Features</a>
+        <a href="#modules">Modules</a>
+        <a href="#roles">Roles</a>
+        <a href="#flow">Flow</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" data-theme-toggle aria-label="Switch theme">◐</button>
+        <a href="login.html" class="btn btn-secondary">Login</a>
+        <a href="register.html" class="btn btn-primary">Register</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">Health + care workflows</span>
+          <h1>A calm, modern portal for patients and doctors.</h1>
+          <p>
+            Tech.Care brings appointments, symptom workflows, vitals, lab reports, patient records, and doctor-side review into one clean healthcare interface.
+          </p>
+          <div class="hero-actions">
+            <a href="register.html" class="btn btn-primary">Get started</a>
+            <a href="#modules" class="btn btn-secondary">See modules</a>
+          </div>
+
+          <div class="hero-metrics">
+            <article class="metric-card">
+              <span class="metric-label">Core roles</span>
+              <strong>Patient + Doctor</strong>
+              <p>Separate dashboards and feature access.</p>
+            </article>
+            <article class="metric-card">
+              <span class="metric-label">Main workflows</span>
+              <strong>Appointments, vitals, reports</strong>
+              <p>Built around the backend modules already defined.</p>
+            </article>
+          </div>
+        </div>
+
+        <div class="hero-visual card-surface">
+          <div class="floating-card primary-panel">
+            <div class="panel-head">
+              <span class="badge primary">Patient panel</span>
+              <span class="mini-text">Live structure</span>
+            </div>
+            <h2>Health data, appointments, and reports in one place</h2>
+            <div class="mini-grid">
+              <div class="mini-tile">
+                <span>Vitals</span>
+                <strong>BP, HR, RR, Temp</strong>
+              </div>
+              <div class="mini-tile">
+                <span>Booking</span>
+                <strong>Doctor list + slots</strong>
+              </div>
+              <div class="mini-tile">
+                <span>Reports</span>
+                <strong>Lab files + history</strong>
+              </div>
+              <div class="mini-tile">
+                <span>Prediction</span>
+                <strong>Symptom workflow</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="floating-card secondary-panel">
+            <div class="panel-head">
+              <span class="badge blue">Doctor panel</span>
+              <span class="mini-text">Clinical overview</span>
+            </div>
+            <ul class="panel-list" role="list">
+              <li>Upcoming appointments</li>
+              <li>Booked patient list</li>
+              <li>Patient report review</li>
+              <li>Vitals and BP graph access</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-block" id="features">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Design goals</span>
+          <h2>Frontend foundation for the full portal</h2>
+          <p>The first step is a clean shared design system and landing page before we build auth and role-based dashboards.</p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card">
+            <div class="feature-icon">✦</div>
+            <h3>Responsive layout</h3>
+            <p>Built for laptop and mobile use with card-based healthcare screens.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon">✚</div>
+            <h3>Role-based flows</h3>
+            <p>Separate patient and doctor journeys connected to the same backend.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon">◎</div>
+            <h3>Module-first structure</h3>
+            <p>Each page maps cleanly to appointments, vitals, reports, and profile modules.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-block alt-section" id="modules">
+      <div class="container">
+        <div class="section-heading compact">
+          <span class="eyebrow">Modules</span>
+          <h2>Planned frontend pages</h2>
+        </div>
+
+        <div class="module-grid">
+          <article class="module-card">
+            <span class="module-tag">Shared</span>
+            <h3>Landing + Auth</h3>
+            <p>Landing page, login, register, theme, common navigation, API config.</p>
+          </article>
+          <article class="module-card">
+            <span class="module-tag">Patient</span>
+            <h3>Dashboard + actions</h3>
+            <p>Enter vitals, book appointments, symptom prediction, reports, and profile.</p>
+          </article>
+          <article class="module-card">
+            <span class="module-tag">Doctor</span>
+            <h3>Dashboard + patients</h3>
+            <p>My appointments, patient list, patient reports, vitals history, and review.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-block" id="roles">
+      <div class="container role-grid">
+        <article class="role-card">
+          <span class="badge primary">Patient journey</span>
+          <h3>Self-service and care follow-up</h3>
+          <ul role="list">
+            <li>Create account and profile</li>
+            <li>Enter health metrics</li>
+            <li>Book appointment with available doctors</li>
+            <li>View reports and prediction-related screens</li>
+          </ul>
+        </article>
+
+        <article class="role-card">
+          <span class="badge blue">Doctor journey</span>
+          <h3>Operational dashboard and review</h3>
+          <ul role="list">
+            <li>View appointment queue</li>
+            <li>See only booked patients</li>
+            <li>Open patient reports and vitals</li>
+            <li>Review blood pressure graph and history</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-block alt-section" id="flow">
+      <div class="container flow-shell">
+        <div class="section-heading compact">
+          <span class="eyebrow">Build sequence</span>
+          <h2>Frontend delivery roadmap</h2>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item active">
+            <span>01</span>
+            <div>
+              <h3>Structure + landing</h3>
+              <p>Base system, folder layout, landing page, and shared styling.</p>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <span>02</span>
+            <div>
+              <h3>Login + register</h3>
+              <p>Role-aware auth screens with backend-ready forms.</p>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <span>03</span>
+            <div>
+              <h3>Patient dashboard</h3>
+              <p>Vitals, booking, prediction, reports, and patient-side modules.</p>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <span>04</span>
+            <div>
+              <h3>Doctor dashboard</h3>
+              <p>Patients, appointments, report review, and doctor actions.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="../js/landing.js" defer></script>
+</body>
+</html>
